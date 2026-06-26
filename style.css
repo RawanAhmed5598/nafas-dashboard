@@ -1,0 +1,1128 @@
+/*======================================
+            GOOGLE VARIABLES
+=======================================*/
+
+:root{
+
+    --primary:#2F80ED;
+    --primary-light:#5EA3FF;
+
+    --green:#2ECC71;
+    --green-light:#EAFBF2;
+
+    --text:#222222;
+    --text-light:#666666;
+
+    --background:#F8FAFC;
+    --white:#ffffff;
+
+    --border:#ECECEC;
+
+    --shadow:
+        0 10px 25px rgba(0,0,0,.06);
+
+    --radius:24px;
+
+}
+
+
+/*======================================
+              RESET
+=======================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Tajawal',sans-serif;
+
+    background:linear-gradient(
+        180deg,
+        #FDFDFD 0%,
+        #F7FAFD 100%
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    min-height:100vh;
+
+    color:var(--text);
+
+}
+
+
+
+/*======================================
+         MOBILE CONTAINER
+=======================================*/
+
+.mobile-container{
+
+    width:100%;
+    max-width:430px;
+
+    min-height:100vh;
+
+    background:white;
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding-bottom:120px;
+
+}
+
+
+
+/*======================================
+              HEADER
+=======================================*/
+
+header{ position:relative; height:120px; width:100%; } /* زر القائمة */ .menu-btn{ position:absolute; top:22px; right:20px; width:46px; height:46px; border:none; border-radius:14px; background:#fff; box-shadow:0 5px 18px rgba(0,0,0,.08); display:flex; align-items:center; justify-content:center; cursor:pointer; z-index:10; } .menu-btn i{ font-size:26px; } /* اللوقو */ .logo-area{ position:absolute; left:50%; top:12px; transform:translateX(-50%); } .top-logo{ width:95px; height:auto; display:block; animation:logoFade 1s ease; }
+
+
+
+.logo-area h2{
+
+    font-size:29px;
+
+    font-weight:800;
+
+    color:#1F1F1F;
+
+    letter-spacing:.5px;
+
+}
+
+
+
+
+
+/*======================================
+          SAFE STATUS CARD
+=======================================*/
+
+.status-card{
+
+    width:90%;
+
+    margin:auto;
+
+    margin-top:25px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #EAFBF2,
+        #DDF9EA
+    );
+
+    border-radius:28px;
+
+    padding:28px;
+
+    gap:18px;
+ display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+    box-shadow:var(--shadow);
+
+    animation:
+
+    slideDown .8s ease;
+
+}
+
+
+
+.status-icon{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+    animation:
+
+    pop .8s;
+
+}
+
+
+
+.status-icon i{
+
+    color:white;
+
+    font-size:40px;
+
+}
+
+
+
+.status-text{
+
+    align-items:center;
+
+}
+
+
+
+.status-text h1{
+
+    margin-top:18px;
+
+}
+
+
+.status-text p{
+
+    font-size:15px;
+
+    color:#4A4A4A;
+
+}
+
+
+
+/*======================================
+          SECTION TITLE
+=======================================*/
+
+.section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    width:90%;
+
+    margin:auto;
+
+    margin-top:38px;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.section-header h3{
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+
+
+.good-status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--green);
+
+    font-weight:700;
+
+    font-size:15px;
+
+}
+
+
+
+.green-dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    box-shadow:
+
+    0 0 10px
+
+    rgba(46,204,113,.6);
+
+}
+/*======================================
+            AIR QUALITY
+=======================================*/
+
+.air-quality{
+
+    margin-top:15px;
+
+}
+
+
+
+.graph{
+
+    width:90%;
+
+    height:170px;
+
+    margin:auto;
+
+    background:#fff;
+
+    border-radius:26px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+
+}
+
+
+
+.graph::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        180deg,
+        rgba(46,204,113,.10),
+        rgba(46,204,113,0)
+    );
+
+    pointer-events:none;
+
+}
+
+
+
+.graph svg{
+
+    width:100%;
+
+    height:100%;
+
+}
+
+
+
+.graph path{
+
+    fill:none;
+
+    stroke:var(--green);
+
+    stroke-width:5;
+
+    stroke-linecap:round;
+
+    stroke-linejoin:round;
+
+    stroke-dasharray:900;
+
+    stroke-dashoffset:900;
+
+    animation:
+
+    drawLine 2.2s ease forwards,
+
+    waveMove 7s ease-in-out infinite;
+
+}
+
+
+
+
+
+/*======================================
+             STATS CARD
+=======================================*/
+
+.stats-card{
+
+    width:90%;
+
+    margin:35px auto 0;
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:25px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+}
+
+
+
+.stat-box{
+
+    background:#FAFAFA;
+
+border:
+
+1px solid #F3F3F3;
+    border-radius:20px;
+
+    padding:20px;
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+        cursor:pointer;
+
+
+}
+
+
+
+.stat-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:130px;
+
+    height:130px;
+
+    background:
+
+    radial-gradient(
+
+    rgba(46,204,113,.12),
+
+    transparent
+
+    );
+
+    top:-70px;
+
+    left:-70px;
+
+}
+
+
+
+.stat-box:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.07);
+
+}
+
+
+
+.label{
+
+    color:#888;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+
+
+.stat-box h2{
+
+    margin-top:12px;
+
+    margin-bottom:8px;
+
+    color:var(--green);
+
+    font-size:33px;
+
+    font-weight:800;
+
+}
+
+
+
+.stat-box small{
+
+    color:#999;
+
+    font-size:13px;
+
+}
+
+
+
+
+
+/*======================================
+        BOTTOM NAVIGATION
+=======================================*/
+
+.bottom-nav{
+
+    position:absolute;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    height:95px;
+
+    background:#fff;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    border-top-left-radius:30px;
+
+    border-top-right-radius:30px;
+
+    box-shadow:0 -8px 25px rgba(0,0,0,.08);
+
+    padding:0 15px 18px;
+
+    z-index:50;
+
+}
+
+
+
+.nav-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:4px;
+
+    text-decoration:none;
+
+    color:#9A9A9A;
+
+    font-size:11px;
+
+    flex:1;
+
+}
+
+
+
+.nav-item i{
+
+    font-size:21px;
+
+}
+
+
+
+.nav-item.active{
+
+    color:#2F80ED;
+
+}
+
+
+
+
+.floating-btn{
+
+    position:absolute;
+
+    bottom:48px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:66px;
+
+    height:66px;
+
+    border-radius:50%;
+
+    background:#0E5C8D;
+
+    border:5px solid #F8FAFC;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
+
+    z-index:999;
+
+}
+
+
+
+
+.floating-btn img{
+
+    width:42px;
+
+    height:42px;
+
+    object-fit:contain;
+
+}
+
+
+
+
+
+
+
+/*======================================
+           RIPPLE EFFECT
+=======================================*/
+
+.floating-btn::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    border-radius:50%;
+
+    border:3px solid rgba(47,128,237,.20);
+
+    animation:
+
+    ripple 2.5s infinite;
+
+}
+
+
+
+
+
+/*======================================
+      SMALL SCREEN FIXES
+=======================================*/
+
+@media(max-width:390px){
+
+    .status-card{
+
+        padding:22px;
+
+    }
+
+    .status-text h1{
+
+        font-size:24px;
+
+    }
+
+    .stats-card{
+
+        padding:18px;
+
+    }
+
+    .stat-box h2{
+
+        font-size:28px;
+
+    }
+
+}
+/*======================================
+             TRANSITIONS
+=======================================*/
+
+*{
+    transition:
+    background .3s ease,
+    color .3s ease,
+    box-shadow .3s ease,
+    transform .3s ease;
+}
+
+
+
+
+
+/*======================================
+             ANIMATIONS
+=======================================*/
+
+@keyframes logoFade{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(-18px)
+        scale(.85);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+}
+
+
+
+@keyframes slideDown{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(-35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+
+
+@keyframes pop{
+
+    0%{
+
+        transform:scale(.5);
+
+    }
+
+    60%{
+
+        transform:scale(1.15);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+@keyframes drawLine{
+
+    to{
+
+        stroke-dashoffset:0;
+
+    }
+
+}
+
+
+
+@keyframes waveMove{
+
+    0%{
+
+        transform:
+        translateX(0);
+
+    }
+
+    50%{
+
+        transform:
+        translateX(-8px);
+
+    }
+
+    100%{
+
+        transform:
+        translateX(0);
+
+    }
+
+}
+
+
+
+@keyframes floatLogo{
+
+    0%{
+
+        transform:
+        translateX(-50%)
+        translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+        translateX(-50%)
+        translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:
+        translateX(-50%)
+        translateY(0);
+
+    }
+
+}
+
+
+
+@keyframes ripple{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:.9;
+
+    }
+
+    100%{
+
+        transform:scale(1.55);
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+
+
+/*======================================
+      ENTRANCE ANIMATIONS
+=======================================*/
+
+.status-card{
+
+    animation:
+    slideDown .9s ease both;
+
+}
+
+
+
+.air-quality{
+
+    animation:
+    fadeUp 1s .2s both;
+
+}
+
+
+
+.stats-card{
+
+    animation:
+    fadeUp 1s .45s both;
+
+}
+
+
+
+.bottom-nav{
+height:95px;
+padding-bottom:18px;
+    animation:
+    fadeUp .9s .7s both;
+
+}
+
+
+
+/*======================================
+          ACTIVE EFFECTS
+=======================================*/
+
+.nav-item:active{
+
+    transform:scale(.92);
+
+}
+
+
+
+.menu-btn:active{
+
+    transform:scale(.92);
+
+}
+
+
+
+.floating-btn:active{
+
+    transform:
+    translateX(-50%)
+    scale(.92);
+
+}
+
+
+
+/*======================================
+           SCROLLBAR
+=======================================*/
+
+::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+    background:#d9d9d9;
+
+    border-radius:20px;
+
+}
+
+
+
+/*======================================
+         DESKTOP PREVIEW
+=======================================*/
+
+@media(min-width:768px){
+
+    body{
+
+        background:
+        linear-gradient(
+        135deg,
+        #eef3fa,
+        #dde9f8);
+
+        padding:40px;
+
+    }
+
+    .mobile-container{
+
+        border-radius:40px;
+
+        box-shadow:
+
+        0 25px 60px rgba(0,0,0,.12);
+
+    }
+
+    .bottom-nav{
+
+        border-bottom-left-radius:40px;
+
+        border-bottom-right-radius:40px;
+
+    }
+
+}
+
+
+
+/*======================================
+          LARGE DESKTOP
+=======================================*/
+
+@media(min-width:1200px){
+
+    body{
+
+        padding:60px;
+
+    }
+
+}
+
+
+
+/*======================================
+          HOVER EFFECTS
+=======================================*/
+
+.status-card:hover{
+
+    transform:
+    translateY(-4px);
+
+}
+
+
+
+.stat-box:hover h2{
+
+    transform:scale(1.05);
+
+}
+
+
+
+.top-logo:hover{
+
+    transform:
+    rotate(-6deg)
+    scale(1.08);
+
+}
+
+
+
+/*======================================
+         GLASS SHADOW
+=======================================*/
+
+.status-card,
+.stats-card,
+.graph{
+
+    backdrop-filter:blur(12px);
+
+}
+
+
+
+/*======================================
+         SMOOTH IMAGES
+=======================================*/
+
+img{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+
+
+
+/*======================================
+          SELECTION
+=======================================*/
+
+::selection{
+
+    background:#2F80ED;
+
+    color:white;
+
+}
