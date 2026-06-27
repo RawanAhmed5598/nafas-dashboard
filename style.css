@@ -1126,3 +1126,4 @@ img{
     color:white;
 
 }
+@media (min-width: 768px) and (max-width: 1024px){ .mobile-container{ max-width:768px; width:100%; border-radius:0; } header{ height:150px; } .top-logo{ width:120px; } .status-card{ width:94%; padding:40px; } .graph{ width:94%; height:240px; } .stats-card{ width:94%; display:grid; grid-template-columns:repeat(4,1fr); gap:20px; } .stat-box{ padding:28px; } .stat-box h2{ font-size:40px; } .bottom-nav{ max-width:768px; height:100px; } .floating-btn{ width:82px; height:82px; } .floating-btn img{ width:48px; } }
